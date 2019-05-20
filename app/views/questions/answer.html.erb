@@ -1,0 +1,16 @@
+<div class="banner">
+  <p><%= @question %></p>
+  <p> --You </p>
+</div>
+<%if @question == 'I am going to work.'
+    answer = 'Great!'
+  elsif @question[-1] == '?'
+    answer = "Silly question, get dressed and go to work!"
+  else
+    answer = "I don't care, get dressed and go to work!"
+  end %>
+<div class="banner">
+  <p><%= answer %></p>
+  <p>--Your coach</p>
+</div>
+<%= link_to "Ask a new question", '/ask' %>
